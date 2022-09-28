@@ -1,0 +1,34 @@
+.week-outline {
+    width: 90vw;
+    height: 50vh;
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+.week-outline-header {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    height: 100%;
+}
+
+.week-outline-header h3 {
+    margin: 0;
+}
+
+.week-outline-header button {
+    border: 0px;
+    width: 100%;
+    height: 80%;
+    background-color: #e8e8e8;
+}
+
+.week-outline-header button:hover {
+    cursor: pointer;
+    background-color: #d8d8d8;
+}
+
+    .week-day-wrapper {
+        display: grid;
+        grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 8.3% 8.3%;
+    }

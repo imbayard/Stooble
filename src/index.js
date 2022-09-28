@@ -3,11 +3,16 @@ import React from 'react';
 
 // Components
 import GratitudePlatform from "./core/GratitudePlatform";
+import WeekOutline from "./core/WeekOutline";
+
+// Styling
+import './index.css';
 
 const App = () => {
     return (
-        <div>
+        <div className='index-app'>
             <h1>Stooble.</h1>
+            <WeekOutline />
             <GratitudePlatform />
         </div>
         )
