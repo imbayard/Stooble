@@ -6,8 +6,11 @@ import DayOutline from './DayOutline';
 // Styling
 import './WeekOutline.css';
 
+// Data
+import days from '../data/days.json';
+
 export default function WeekOutline() {
-	const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+	const [goalsForDays, setGoalsForDays] = useState([['Goal', 'Other Goal'], [''], [''], [''], [''], [''], ['']]);
 	return (
 		<div className='week-outline'>
 			<span className='week-outline-header'>
@@ -15,10 +18,12 @@ export default function WeekOutline() {
 				<button>Add Goals</button>
 			</span>
 			<span className='week-day-wrapper'>
-				{days.map(day => {
+				{days.map((day, i) => {
 					return (
 						<DayOutline
 							dayName={day}
+							goals={goalsForDays[i]}
+							key={day}
 						/>
 					)
 				})}
