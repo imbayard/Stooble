@@ -20,10 +20,12 @@ export default function WeekOutline() {
 		<div className='week-outline'>
 			<span className='week-outline-header'>
 				<h3>Your Week</h3>
-				<button onClick={handleOpenAddGoals}>Add Goals</button>
+				<button className='add-goals-button' onClick={handleOpenAddGoals}>Add Goals</button>
 				<AddGoalModal
 					isModalOpen={isAddGoalsOpen}
 					toggleModalOpen={handleOpenAddGoals}
+					goals={goalsForDays}
+					setGoals={setGoalsForDays}
 				/>
 			</span>
 			<span className='week-day-wrapper'>
