@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 // Components
 import DayOutline from './DayOutline';
+import AddGoalModal from './AddGoalModal';
 
 // Styling
 import './WeekOutline.css';
@@ -11,11 +12,21 @@ import days from '../data/days.json';
 
 export default function WeekOutline() {
 	const [goalsForDays, setGoalsForDays] = useState([['Goal', 'Other Goal'], [''], [''], [''], [''], [''], ['']]);
+	const [isAddGoalsOpen, setIsAddGoalsOpen] = useState(false)
+	const handleOpenAddGoals = () => {
+		setIsAddGoalsOpen(!isAddGoalsOpen)
+	}
 	return (
 		<div className='week-outline'>
 			<span className='week-outline-header'>
 				<h3>Your Week</h3>
-				<button>Add Goals</button>
+				<button className='add-goals-button' onClick={handleOpenAddGoals}>Add Goals</button>
+				<AddGoalModal
+					isModalOpen={isAddGoalsOpen}
+					toggleModalOpen={handleOpenAddGoals}
+					goals={goalsForDays}
+					setGoals={setGoalsForDays}
+				/>
 			</span>
 			<span className='week-day-wrapper'>
 				{days.map((day, i) => {

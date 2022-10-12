@@ -9,7 +9,7 @@ export default function DayOutline({
             <h5>{dayName}</h5>
             {goals.map(goal => {
                 return (
-                    <p>{goal}</p>
+                    <p key={goal}>{goal}</p>
                 )
             })}
         </div>
