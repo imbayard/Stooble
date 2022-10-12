@@ -37,8 +37,28 @@
 .agm-day {
     padding-left: 5%;
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 10% 10% 80%;
     height: 100%;
+}
+
+.agm-add-goal-wrapper {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.agm-add-goal {
+    height: 50%;
+}
+
+.add-goal-button:hover {
+    cursor: pointer;
+}
+
+.add-goal-button {
+    height: 50%;
+    border: none;
+    background-color: ghostwhite;
+    color: lawngreen;
 }
 
 .agm-goals-list {

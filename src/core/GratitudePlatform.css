@@ -1,7 +1,6 @@
 .gratitude-platform {
     height: 50vh;
     width: 90vw;
-    border: 1px solid black;
     display: grid;
     grid-template-rows: 10% 5% 80% 5%;
 }

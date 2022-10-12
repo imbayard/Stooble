@@ -12,6 +12,7 @@ export default function AddGoalsModal({
     goals,
     setGoals
 }) {
+    const [addGoals, setAddGoals] = useState(['', '', '', '', '', '', ''])
     const deleteGoal = (weekIndex, goalIndex) => {
         const newGoals = []
         for (let i = 0; i < goals.length; i++) {
@@ -31,6 +32,31 @@ export default function AddGoalsModal({
         }
         setGoals(newGoals)
     }
+    const handleSubmit = (value, weekIndex) => {
+        const newWeek = []
+        for (let i = 0; i < goals.length; i++) {
+            if (i == weekIndex) {
+                const dayGoals = goals[i]
+                const newGoals = [value, ...dayGoals]
+                newWeek.push(newGoals)
+            } else {
+                newWeek.push(goals[i])
+            }
+        }
+        setGoals(newWeek)
+        handleChange('', weekIndex)
+    }
+    const handleChange = (value, weekIndex) => {
+        const newAddGoals = []
+        for (let i = 0; i < addGoals.length; i++) {
+            if (i == weekIndex) {
+                newAddGoals.push(value)
+            } else {
+                newAddGoals.push(addGoals[i])
+            }
+        }
+        setAddGoals(newAddGoals)
+    }
     return (
         isModalOpen ? (
             <div className='add-goal-modal'>
@@ -43,7 +69,18 @@ export default function AddGoalsModal({
                         {Days.map((day, i) => {
                             return (
                                 <div className='agm-day' key={day}>
-                                    <p style={{fontWeight: 'bold'}}>{day}</p>
+                                    <p style={{ fontWeight: 'bold' }}>{day}</p>
+                                    <div className='agm-add-goal-wrapper'>
+                                        <input
+                                            onChange={e => handleChange(e.target.value, i)}
+                                            className='agm-add-goal'
+                                            maxLength="10"
+                                            value={addGoals[i]}
+                                        />
+                                        <button className='add-goal-button'
+                                            onClick={() => handleSubmit(addGoals[i], i)}
+                                        >+</button>
+                                    </div>
                                     <div className='agm-goals-list'>
                                         {goals[i].map((goal, j) => {
                                             return (
@@ -52,7 +89,7 @@ export default function AddGoalsModal({
                                                     <p className='agm-goal'>
                                                         {goal}
                                                     </p>
-                                                    <button className='delete-goal' onClick={(e) => deleteGoal(i,j)}>x</button>
+                                                    <button className='delete-goal' onClick={() => deleteGoal(i,j)}>x</button>
                                                 </div>
                                                     :
                                                 <div key={goal}></div>
