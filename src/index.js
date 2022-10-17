@@ -2,7 +2,6 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 
 // Components
-import GratitudePlatform from "./core/GratitudePlatform";
 import WeekOutline from "./core/WeekOutline";
 
 // Styling
@@ -13,7 +12,6 @@ const App = () => {
         <div className='index-app'>
             <h1>Stooble.</h1>
             <WeekOutline />
-            <GratitudePlatform />
         </div>
         )
 }

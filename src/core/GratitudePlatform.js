@@ -18,7 +18,6 @@ export default function GratitudePlatform() {
     }
     return (
         <div className='gratitude-platform'>
-            <h3 className='gratitude-header'>Gratitude Journal</h3>
             <p className='gratitude-descriptor'>What are you grateful for today?</p>
             <span className='gratitude-form-wrapper'>
                 {vals.map(val => {

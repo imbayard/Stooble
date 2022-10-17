@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 // Components
 import DayOutline from './DayOutline';
 import AddGoalModal from './AddGoalModal';
+import DailyCheckIn from './DailyCheckIn';
 
 // Styling
 import './WeekOutline.css';
@@ -39,6 +40,15 @@ export default function WeekOutline() {
 					)
 				})}
 			</span>
+			<DailyCheckIn
+				goals={goalsForDays[getDayIndex()]}
+			/>
 		</div>
 	)
+
+	function getDayIndex() {
+		const d = new Date().getDay()
+		// change to our indexing system (0: Monday, ... 6: Sunday)
+		return d == 0 ? 6 : d-1
+	}
 }
