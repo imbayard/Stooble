@@ -1,0 +1,21 @@
+.daily-check-in {
+    border: 1px solid black;
+    width: 100vw;
+    height: 300vh;
+    display: grid;
+    grid-template-rows: 8% 23% 23% 23% 23%;
+}
+
+.main-ci-header {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.ci-module-row {
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}

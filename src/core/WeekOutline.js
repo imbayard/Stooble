@@ -41,7 +41,7 @@ export default function WeekOutline() {
 				})}
 			</span>
 			<DailyCheckIn
-				goals={goalsForDays[getDayIndex()]}
+				
 			/>
 		</div>
 	)
