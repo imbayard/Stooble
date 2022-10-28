@@ -11,6 +11,7 @@ export default function CIModule({
     return (
         <div className='ci-module'>
             <p className='ci-module-header'>{header}</p>
+            {MainTracker}
         </div>
     )
 }

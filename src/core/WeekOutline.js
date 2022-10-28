@@ -29,17 +29,6 @@ export default function WeekOutline() {
 					setGoals={setGoalsForDays}
 				/>
 			</span>
-			<span className='week-day-wrapper'>
-				{days.map((day, i) => {
-					return (
-						<DayOutline
-							dayName={day}
-							goals={goalsForDays[i]}
-							key={day}
-						/>
-					)
-				})}
-			</span>
 			<DailyCheckIn
 				
 			/>

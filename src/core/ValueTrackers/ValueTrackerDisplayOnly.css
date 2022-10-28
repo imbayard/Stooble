@@ -1,0 +1,17 @@
+.value-tracker-display-only {
+	height: 100%;
+	width: 100%;
+	border: 1px solid green;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.vt-do-label {
+	text-align: right;
+	font-weight: bold;
+}
+
+.vt-do-value {
+	text-align: left;
+	margin-left: 2%;
+}
