@@ -1,0 +1,31 @@
+{
+  "sleep": {
+    "header": "Sleep",
+    "label": "Total Sleep Last Night:"
+  },
+  "workout": {
+    "header": "Workout",
+    "label": "Total Workout Time:"
+  },
+  "phone": {
+    "header": "Phone",
+    "label": "Total Tracked App Time:"
+  },
+  "reading": {
+    "header": "Reading",
+    "label": "Total Reading Time:"
+  },
+  "money": {
+    "header": "Money",
+    "label": "Total Money Spent Today:"
+  },
+  "mealsnacks": {
+    "header": "Mealsnacks",
+    "label1": "Total Mealsnacks:",
+    "label2": "Total Water:"
+  },
+  "mindfulness": {
+    "header": "Mindfulness",
+    "label": "Total Mindful Moments:"
+  }
+}
