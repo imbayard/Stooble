@@ -2,20 +2,32 @@
     border: 1px solid black;
     width: 100vw;
     height: 300vh;
-    display: grid;
-    grid-template-rows: 8% 23% 23% 23% 23%;
+    display: block;
 }
 
 .main-ci-header {
     width: 100%;
-    height: 100%;
+    height: 3%;
     text-align: center;
 }
 
-.ci-module-row {
-    width: 100%;
-    height: 100%;
-    border: 1px solid red;
-    display: grid;
-    grid-template-columns: 50% 50%;
+.ci-module-obj {
+    float: left;
+    width: 50%;
+    height: 25%;
+}
+
+@media screen and (max-width: 800px) {
+    .daily-check-in {
+        height: 600vh;
+    }
+
+    .ci-module-obj {
+        width: 100%;
+        height: 12%;
+    }
+
+    .main-ci-header {
+        height: 2%;
+    }
 }
